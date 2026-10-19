@@ -97,6 +97,7 @@
   h3 { font-size: 16px; margin: 0; }
   .sub { color: var(--muted); font-size: 14px; }
 
+  .lead { margin: 0 0 16px; }
   .skills { display: grid; grid-template-columns: 170px 1fr; gap: 12px 20px; }
   .skills dt { font-weight: 600; font-size: 14px; padding-top: 3px; }
   .skills dd { margin: 0; display: flex; flex-wrap: wrap; gap: 6px; }
@@ -159,6 +160,20 @@
     .timeline { margin-top: 10px; }
     .stint { margin-bottom: 14px; }
     a { text-decoration: none; }
+    .contact { font-size: 11px; margin-top: 10px; }
+    .badge { font-size: 10.5px; margin-top: 8px; padding: 3px 8px; }
+    .chip { font-size: 10.5px; padding: 1px 7px; }
+    .skills { grid-template-columns: 140px 1fr; gap: 5px 14px; }
+    .skills dt { font-size: 11.5px; padding-top: 1px; }
+    .skills dd { gap: 4px; }
+    .lead { margin-bottom: 8px; }
+    h3 { font-size: 13px; }
+    .sub, .certs .issuer { font-size: 11px; }
+    .when { font-size: 10.5px; }
+    ul.points { margin-top: 4px; }
+    ul.points li { margin: 2px 0; }
+    .certs li { padding: 5px 0; }
+    .certs li > span:first-child { font-size: 11.5px; }
     * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   }
 </style>
@@ -207,6 +222,17 @@
       <dd><span class="chip">AWS</span><span class="chip">Google Cloud</span><span class="chip">Claude</span></dd>
       <dt>Domain</dt>
       <dd><span class="chip">Utility billing</span><span class="chip">Deposits</span><span class="chip">Payments</span><span class="chip">Collections &amp; severance</span><span class="chip">Field operations</span><span class="chip">Regulatory compliance</span></dd>
+    </dl>
+  </section>
+
+  <section>
+    <h2>AI-assisted workflow</h2>
+    <p class="lead">An AI-assisted workflow that pairs agentic coding tools with the delivery toolchain to design, build and ship production features faster.</p>
+    <dl class="skills">
+      <dt>AI coding</dt>
+      <dd><span class="chip"><b>Claude Code</b></span><span class="chip">OpenAI Codex</span><span class="chip">GitHub Copilot</span></dd>
+      <dt>Integrations</dt>
+      <dd><span class="chip"><b>Azure DevOps</b> integrated with Claude Code via Personal Access Token (PAT)</span></dd>
     </dl>
   </section>
 
