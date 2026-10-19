@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Abhijeet Singh · Resume</title>
+<meta name="description" content="Resume of Abhijeet Brajeshkumar Singh, an Oracle Utilities C2M / CC&B developer at Infosys with 5+ years of experience.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --paper: #ffffff;
+    --ink: #14181f;
+    --muted: #5b6472;
+    --line: #e3e6eb;
+    --accent: #c2410c;
+    --accent-soft: #fff1e8;
+    --chip: #f1f3f6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0d1015;
+      --paper: #151a21;
+      --ink: #e8ebf0;
+      --muted: #98a2b1;
+      --line: #262d37;
+      --accent: #fb923c;
+      --accent-soft: #2a1a10;
+      --chip: #1d232c;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0d1015;
+    --paper: #151a21;
+    --ink: #e8ebf0;
+    --muted: #98a2b1;
+    --line: #262d37;
+    --accent: #fb923c;
+    --accent-soft: #2a1a10;
+    --chip: #1d232c;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 15px/1.6 Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  a { color: inherit; text-decoration-color: var(--line); text-underline-offset: 3px; }
+  a:hover { color: var(--accent); text-decoration-color: currentColor; }
+
+  .toolbar {
+    max-width: 860px; margin: 0 auto; padding: 20px 16px 0;
+    display: flex; justify-content: flex-end; gap: 8px;
+  }
+  .btn {
+    font: 500 13px/1 Inter, sans-serif; color: var(--ink);
+    background: var(--paper); border: 1px solid var(--line); border-radius: 8px;
+    padding: 9px 14px; cursor: pointer;
+  }
+  .btn:hover { border-color: var(--accent); color: var(--accent); }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .btn.primary:hover { filter: brightness(1.08); color: #fff; }
+
+  main {
+    max-width: 860px; margin: 12px auto 48px; padding: 48px 56px;
+    background: var(--paper); border: 1px solid var(--line); border-radius: 14px;
+  }
+  .eyebrow {
+    font: 500 12px/1 "JetBrains Mono", ui-monospace, monospace;
+    letter-spacing: .08em; text-transform: uppercase; color: var(--accent);
+  }
+  h1 { font-size: 40px; line-height: 1.1; letter-spacing: -.02em; margin: 12px 0 8px; }
+  .tagline { font-size: 18px; color: var(--muted); margin: 0; }
+  .tagline b { color: var(--ink); font-weight: 600; }
+  .contact {
+    display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 18px 0 0; padding: 0; list-style: none;
+    font-size: 14px; color: var(--muted);
+  }
+  .badge {
+    display: inline-block; margin-top: 16px; font-size: 13px; font-weight: 500;
+    background: var(--accent-soft); color: var(--accent); padding: 5px 10px; border-radius: 999px;
+  }
+  .intro { margin: 24px 0 0; font-size: 16px; }
+
+  section { margin-top: 40px; }
+  h2 {
+    font: 600 12px/1 "JetBrains Mono", ui-monospace, monospace;
+    letter-spacing: .1em; text-transform: uppercase; color: var(--muted);
+    display: flex; align-items: center; gap: 12px; margin: 0 0 18px;
+  }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  h3 { font-size: 16px; margin: 0; }
+  .sub { color: var(--muted); font-size: 14px; }
+
+  .skills { display: grid; grid-template-columns: 170px 1fr; gap: 12px 20px; }
+  .skills dt { font-weight: 600; font-size: 14px; padding-top: 3px; }
+  .skills dd { margin: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip { background: var(--chip); border-radius: 6px; padding: 3px 9px; font-size: 13px; }
+
+  .role { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .when { font: 500 13px "JetBrains Mono", ui-monospace, monospace; color: var(--muted); white-space: nowrap; }
+  .timeline { border-left: 2px solid var(--line); margin: 18px 0 0 4px; padding-left: 22px; }
+  .stint { position: relative; margin-bottom: 26px; }
+  .stint:last-child { margin-bottom: 0; }
+  .stint::before {
+    content: ""; position: absolute; left: -29px; top: 6px; width: 12px; height: 12px;
+    border-radius: 50%; background: var(--paper); border: 2px solid var(--accent);
+  }
+  ul.points { margin: 8px 0 0; padding-left: 18px; }
+  ul.points li { margin: 4px 0; }
+  ul.points li::marker { color: var(--accent); }
+
+  .cards { display: grid; gap: 14px; }
+  .card { border: 1px solid var(--line); border-radius: 10px; padding: 18px 20px; }
+  .card .tags { font: 500 12px "JetBrains Mono", ui-monospace, monospace; color: var(--accent); margin-top: 2px; }
+
+  .certs { list-style: none; margin: 0; padding: 0; }
+  .certs li {
+    display: flex; justify-content: space-between; gap: 16px; padding: 10px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .certs li:last-child { border-bottom: 0; }
+  .certs .issuer { color: var(--muted); font-size: 14px; }
+  .certs .star { color: var(--accent); font-weight: 600; }
+
+  footer { text-align: center; color: var(--muted); font-size: 13px; padding: 0 16px 32px; }
+
+  @media (max-width: 680px) {
+    main { padding: 28px 20px; margin: 12px 16px 32px; border-radius: 12px; }
+    .toolbar { padding: 16px 16px 0; }
+    h1 { font-size: 30px; }
+    .skills { grid-template-columns: 1fr; gap: 4px; }
+    .skills dd { margin-bottom: 10px; }
+    .certs li { flex-direction: column; gap: 2px; }
+  }
+
+  @media print {
+    @page { size: A4; margin: 14mm 14mm; }
+    :root, :root[data-theme="dark"] {
+      --bg: #fff; --paper: #fff; --ink: #111; --muted: #555; --line: #ddd;
+      --accent: #c2410c; --accent-soft: #fff1e8; --chip: #f1f3f6;
+    }
+    body { font-size: 11.5px; line-height: 1.45; }
+    .toolbar, footer { display: none; }
+    main { border: 0; padding: 0; margin: 0; max-width: none; }
+    h1 { font-size: 28px; margin-top: 6px; }
+    .tagline { font-size: 14px; }
+    .intro { font-size: 12px; margin-top: 14px; }
+    section { margin-top: 20px; }
+    h2 { margin-bottom: 10px; break-after: avoid; page-break-after: avoid; }
+    .stint, .card, .certs li { break-inside: avoid; }
+    .card { padding: 10px 14px; }
+    .cards { gap: 8px; }
+    .timeline { margin-top: 10px; }
+    .stint { margin-bottom: 14px; }
+    a { text-decoration: none; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <button class="btn" id="theme" type="button" aria-label="Toggle colour theme">◐ Theme</button>
+  <button class="btn primary" type="button" onclick="window.print()">Save as PDF</button>
+</div>
+
+<main>
+  <header>
+    <div class="eyebrow">Oracle Utilities Developer</div>
+    <h1>Abhijeet Brajeshkumar Singh</h1>
+    <p class="tagline"><b>Oracle Utilities C2M / CC&amp;B Developer</b> · Infosys Limited · 5+ years</p>
+    <ul class="contact">
+      <li><a href="tel:+919869783690">+91 98697 83690</a></li>
+      <li>Mumbai, India</li>
+      <li><a href="https://github.com/dev-abhijeetASR">github.com/dev-abhijeetASR</a></li>
+      <li><a href="https://www.linkedin.com/in/abhijeet-singh-534514a6/">LinkedIn</a></li>
+    </ul>
+    <span class="badge">H-1B visa holder</span>
+    <p class="intro">
+      Oracle Utilities developer with <b>5+ years</b> at Infosys designing, building and supporting
+      Customer to Meter (C2M) and Customer Care &amp; Billing (CC&amp;B) solutions for US water and energy
+      utilities. I deliver custom algorithms, business objects and configurations across billing, deposits,
+      payments, severance and field operations, from requirements through production support, and act as
+      the bridge between client stakeholders and distributed delivery teams.
+    </p>
+  </header>
+
+  <section>
+    <h2>Skills</h2>
+    <dl class="skills">
+      <dt>Oracle Utilities</dt>
+      <dd><span class="chip">C2M</span><span class="chip">CC&amp;B</span><span class="chip">Custom algorithms</span><span class="chip">Business objects</span><span class="chip">BO lifecycle config</span><span class="chip">Customer contact classes</span><span class="chip">BIP reports</span></dd>
+      <dt>Languages</dt>
+      <dd><span class="chip">Java</span><span class="chip">Groovy</span><span class="chip">Oracle SQL</span><span class="chip">MySQL</span><span class="chip">4GL scripting</span></dd>
+      <dt>Integration &amp; testing</dt>
+      <dd><span class="chip">SOA</span><span class="chip">SOAP UI</span><span class="chip">OUTA</span><span class="chip">Functional / integration / system testing</span></dd>
+      <dt>Data</dt>
+      <dd><span class="chip">Data conversion</span><span class="chip">Legacy migration</span><span class="chip">ETL</span><span class="chip">SQL tuning</span></dd>
+      <dt>Cloud &amp; AI</dt>
+      <dd><span class="chip">AWS</span><span class="chip">Google Cloud</span><span class="chip">Claude</span></dd>
+      <dt>Domain</dt>
+      <dd><span class="chip">Utility billing</span><span class="chip">Deposits</span><span class="chip">Payments</span><span class="chip">Collections &amp; severance</span><span class="chip">Field operations</span><span class="chip">Regulatory compliance</span></dd>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <div class="role">
+      <h3>Infosys Limited · Oracle Utilities C2M / CC&amp;B Developer</h3>
+      <span class="when">Mar 2021 – Present</span>
+    </div>
+    <div class="timeline">
+      <div class="stint">
+        <div class="role">
+          <h3>Citizens Energy Group <span class="sub">· CEG Utility</span></h3>
+          <span class="when">Mar 2022 – Present</span>
+        </div>
+        <ul class="points">
+          <li>Design, develop and enhance custom C2M / CC&amp;B solutions that meet the client's billing and regulatory requirements.</li>
+          <li>Work with business analysts, SMEs and functional teams to analyze requirements, define business rules and design enhancements across billing, deposits, payments and field operations.</li>
+          <li>Build custom algorithms, business objects and configurations that extend C2M base functionality.</li>
+          <li>Create and maintain BIP reports, queries and templates for operational, audit and compliance reporting.</li>
+          <li>Provide production support: defect analysis, root-cause identification and resolution within SLA.</li>
+          <li>Run functional, system and integration testing so releases stay accurate, stable and compliant.</li>
+        </ul>
+      </div>
+      <div class="stint">
+        <div class="role">
+          <h3>El Paso Water</h3>
+          <span class="when">Mar 2021 – Feb 2022</span>
+        </div>
+        <ul class="points">
+          <li>Migrated customer and billing data from legacy systems into Oracle C2M / CC&amp;B using SQL-based extract, transform and load.</li>
+          <li>Performed functional, integration and system testing to verify conversion output; identified and resolved defects.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Key enhancements</h2>
+    <div class="cards">
+      <article class="card">
+        <h3>Deposit Recommendation Algorithm</h3>
+        <div class="tags">C2M · SRB · Citizens Energy Group</div>
+        <ul class="points">
+          <li>Led requirements and business-rule definition to close gaps in the C2M base deposit algorithm against regulatory policy.</li>
+          <li>Automated deposit calculation from Estimated Annual Usage, service type, customer status, EAP enrollment, delinquency, reconnection and existing deposits with accrued interest.</li>
+          <li>Replaced manual CSR calculations with consistent recommendations across CSR tools and web channels, cutting call handling time and errors and reducing bad-debt risk.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Severance Cancellation with Merged Balance Logic</h3>
+        <div class="tags">C2M · SRB · Citizens Energy Group</div>
+        <ul class="points">
+          <li>Moved severance cancellation from per-Service-Agreement logic to account-level, merged-balance threshold evaluation that replicates legacy behavior.</li>
+          <li>Calculated SA-family arrears and cascaded cancellation across related agreements, however a payment is distributed.</li>
+          <li>Exposed arrears and threshold values for auditability and regulatory compliance.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Lead Service Line Pitcher &amp; Filter Tracking</h3>
+        <div class="tags">C2M extension · Citizens Energy Group</div>
+        <ul class="points">
+          <li>Built an extension that creates Customer Contact records when field crews complete LSL pitcher and filter deliveries.</li>
+          <li>Wrote a custom algorithm on the D1-FieldActivityIBComm business object at "Completed" status, plus a new LSLR Customer Contact Class for audit and regulatory reporting.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h2>Certifications</h2>
+    <ul class="certs">
+      <li><span><span class="star">Claude Certified Architect – Foundations</span><br><span class="issuer">Anthropic</span></span><span class="when">Aug 2026</span></li>
+      <li><span><span class="star">Oracle Utilities Customer to Meter and Customer Cloud Service 2025 Certified Implementation Professional</span><br><span class="issuer">Oracle</span></span><span class="when">Apr 2026</span></li>
+      <li><span>Google Associate Cloud Engineer<br><span class="issuer">Infosys (internal)</span></span><span class="when">Dec 2024</span></li>
+      <li><span>AWS Solutions Architect – Associate<br><span class="issuer">Infosys (internal)</span></span><span class="when">Dec 2024</span></li>
+      <li><span>Utility Billing Specialist<br><span class="issuer">Infosys (internal)</span></span><span class="when">Aug 2024</span></li>
+      <li><span>Energy and Utilities Associate<br><span class="issuer">Infosys (internal)</span></span><span class="when">Aug 2024</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="role">
+      <h3>B.E., Computer Science <span class="sub">· Thakur College of Engineering and Technology, Mumbai</span></h3>
+      <span class="when">2020</span>
+    </div>
+  </section>
+</main>
+
+<footer>© <span id="yr">2026</span> · Hosted on GitHub Pages</footer>
+
+<script>
+  (function () {
+    var root = document.documentElement, KEY = "theme";
+    try { var saved = localStorage.getItem(KEY); if (saved) root.setAttribute("data-theme", saved); } catch (e) {}
+    document.getElementById("theme").addEventListener("click", function () {
+      var cur = root.getAttribute("data-theme") ||
+        (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      var next = cur === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      try { localStorage.setItem(KEY, next); } catch (e) {}
+    });
+    document.getElementById("yr").textContent = new Date().getFullYear();
+  })();
+</script>
+</body>
+</html>
